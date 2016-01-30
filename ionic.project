@@ -1,0 +1,12 @@
+{
+  "name": "kAppAlpha",
+  "app_id": "kAppAlpha",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
