@@ -3,7 +3,7 @@
     <button id="fab-menu-left" class="button button-fab second-row-button left expanded button-energized-900 spin" ng-click="leftMenuClicked()"></button>
     <button id="fab-menu-middle" class="button button-fab second-row-button middle expanded button-energized-900 spin" ng-click="middleMenuClicked()"></button>
     <button id="fab-menu-right" class="button button-fab second-row-button right expanded button-energized-900 spin" ng-click="rightMenuClicked()"></button>
-</span>
+<!-- </span> -->
 
 <ion-side-menus enable-menu-with-back-views="true">
     <!-- main content -->
@@ -28,16 +28,17 @@
     
         <ion-content class="stable-bg has-expanded-header">
             <ion-list>
-                <ion-item nav-clear menu-close ui-sref="app.page1">
-                    Page 1
+                <ion-item nav-clear menu-close ui-sref="app.page1" ng-click="hideMenu()">
+                    Page 1 abc
                 </ion-item>
-                <ion-item nav-clear menu-close ui-sref="app.page2">
-                    Page 2
+                <ion-item nav-clear menu-close ui-sref="app.page2" ng-click="hideMenu()">
+                    Page 2 abc
                 </ion-item>
-                <ion-item nav-clear menu-close ui-sref="app.page3">
-                    Page 3
+                <ion-item nav-clear menu-close ui-sref="app.page3" ng-click="hideMenu()">
+                    Page 3 abc
                 </ion-item>
             </ion-list>
         </ion-content>
     </ion-side-menu>
 </ion-side-menus>
+</span>
