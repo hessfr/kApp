@@ -1,11 +1,9 @@
 /* global angular, document, window */
 'use strict';
 
-angular.module('kApp.MyTestController', [])
+angular.module('kApp.MenuController', [])
 
-// .controller('MyTestController', function($timeout) {
-
-.controller('MyTestController', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+.controller('MenuController', function($scope, $stateParams, $state, $ionicSideMenuDelegate, $timeout, ionicMaterialInk, ionicMaterialMotion) {
 
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -20,15 +18,19 @@ angular.module('kApp.MyTestController', [])
     }, 200);
     $scope.mainMenuClicked = function() {
         console.log("mainMenuClicked");
+        $ionicSideMenuDelegate.toggleLeft();
     };
     $scope.leftMenuClicked = function() {
         console.log("leftMenuClicked");
+        $state.go('app.page1');
     };
     $scope.middleMenuClicked = function() {
         console.log("middleMenuClicked");
+        $state.go('app.page2');
     };
     $scope.rightMenuClicked = function() {
         console.log("rightMenuClicked");
+        $state.go('app.page3');
     };
 
     // Set Motion
