@@ -1,4 +1,4 @@
-angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.HomescreenController', 'kApp.MyTestController', 'ionMdInput'])
+angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.Page1Controller', 'kApp.MyTestController', 'ionMdInput'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -32,19 +32,15 @@ angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.Homescr
     })
 
     .state('app.home', {
-        url: '/home',
+        url: '/page1',
         views: {
-            'fabContent': {
-                templateUrl: 'templates/home.html',
-                controller: 'HomeScreenController'
-            },
-            'menuContent': {
-                templateUrl: 'templates/menubutton.html'
-                // controller: 'MyTestController'
+            'pageContent': {
+                templateUrl: 'templates/page1.html',
+                controller: 'Page1Controller'
             }
         }
     })
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/home');
+    $urlRouterProvider.otherwise('/app/page1');
 });
