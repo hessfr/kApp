@@ -14,7 +14,6 @@ angular.module('kApp.MenuController', [])
         document.getElementById('fab-menu-main').classList.toggle('on');
     }, 200);
     $scope.mainMenuClicked = function() {
-        console.log("mainMenuClicked");
         if ($ionicSideMenuDelegate.isOpen()) {
             $scope.hideMenu();
         } else {
@@ -22,17 +21,14 @@ angular.module('kApp.MenuController', [])
         }
     };
     $scope.leftMenuClicked = function() {
-        console.log("leftMenuClicked");
         $state.go('app.page1');
         $scope.hideMenu();
     };
     $scope.middleMenuClicked = function() {
-        console.log("middleMenuClicked");
         $state.go('app.page2');
         $scope.hideMenu();
     };
     $scope.rightMenuClicked = function() {
-        console.log("rightMenuClicked");
         $state.go('app.page3');
         $scope.hideMenu();
     };
