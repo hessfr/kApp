@@ -16,6 +16,8 @@ $ionicons-font-path: "../lib/ionic/release/fonts" !default;
     background-position: 65% 60%;
     width: 80px;
     height: 80px;
+
+    z-index: 9999;
 }
 
 .second-row-button {
@@ -31,7 +33,7 @@ $ionicons-font-path: "../lib/ionic/release/fonts" !default;
     position: absolute;
 
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    z-index: 9999;
+    z-index: 9998;
     max-height: initial;
     max-width: initial;
     border-radius: 50%;
