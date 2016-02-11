@@ -32,6 +32,17 @@ angular.module('kApp.MenuController', [])
         $state.go('app.page3');
         $scope.hideMenu();
     };
+    $scope.backButtonClicked = function() {
+        console.log("backButtonClicked");
+        //TODO
+    };
+    $scope.menuButtonClicked = function() {
+        if ($ionicSideMenuDelegate.isOpen()) {
+            $scope.hideMenu();
+        } else {
+            $scope.showMenu();
+        }
+    };
 
     // Set Motion
     ionicMaterialMotion.fadeSlideInRight();
@@ -43,6 +54,12 @@ angular.module('kApp.MenuController', [])
         if (!$ionicSideMenuDelegate.isOpen()) {
             $ionicSideMenuDelegate.toggleLeft();
         }
+
+        document.getElementById('fab-menu-left').style.right="140px";
+        document.getElementById('fab-menu-middle').style.right="110px";
+        document.getElementById('fab-menu-middle').style.bottom="110px";
+        document.getElementById('fab-menu-right').style.bottom="140px";
+
         document.getElementById('fab-menu-left').classList.toggle('on', true);
         document.getElementById('fab-menu-middle').classList.toggle('on', true);
         document.getElementById('fab-menu-right').classList.toggle('on', true);
@@ -52,6 +69,12 @@ angular.module('kApp.MenuController', [])
         if ($ionicSideMenuDelegate.isOpen()) {
             $ionicSideMenuDelegate.toggleLeft();
         }
+
+        document.getElementById('fab-menu-left').style.right="16px";
+        document.getElementById('fab-menu-middle').style.right="16px";
+        document.getElementById('fab-menu-middle').style.bottom="16px";
+        document.getElementById('fab-menu-right').style.bottom="16px";
+
         document.getElementById('fab-menu-left').classList.toggle('on', false);
         document.getElementById('fab-menu-middle').classList.toggle('on', false);
         document.getElementById('fab-menu-right').classList.toggle('on', false);

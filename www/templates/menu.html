@@ -1,17 +1,21 @@
 <span ng-controller="MenuController">
+    <!-- menu buttons -->
     <button id="fab-menu-main" class="button button-fab button-fab-bottom-right kmenu expanded button-energized-900 spin" menu-toggle="left" ng-click="mainMenuClicked()"></button>
-    <button id="fab-menu-left" class="button button-fab second-row-button left expanded button-energized-900 spin" ng-click="leftMenuClicked()"></button>
-    <button id="fab-menu-middle" class="button button-fab second-row-button middle expanded button-energized-900 spin" ng-click="middleMenuClicked()"></button>
-    <button id="fab-menu-right" class="button button-fab second-row-button right expanded button-energized-900 spin" ng-click="rightMenuClicked()"></button>
+
+    <button id="fab-menu-left" class="second-row-button button-energized-900" ng-click="leftMenuClicked()"></button>
+
+    <button id="fab-menu-middle" class="second-row-button button-energized-900" ng-click="middleMenuClicked()"></button>
+
+    <button id="fab-menu-right" class="second-row-button button-energized-900" ng-click="rightMenuClicked()"></button>
 
     <ion-side-menus enable-menu-with-back-views="true">
         <!-- main content -->
         <ion-side-menu-content>
             <ion-nav-bar class="bar-assertive-900" ng-class="{'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
-                <ion-nav-back-button class="no-text">
+                <ion-nav-back-button class="no-text" ng-click="backButtonClicked()">
                 </ion-nav-back-button>
                 <ion-nav-buttons side="left">
-                    <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="left">
+                    <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="left" ng-click="menuButtonClicked()">
                     </button>
                 </ion-nav-buttons>
             </ion-nav-bar>
