@@ -55,14 +55,15 @@ angular.module('kApp.MenuController', [])
             $ionicSideMenuDelegate.toggleLeft();
         }
 
-        document.getElementById('fab-menu-left').style.right="140px";
-        document.getElementById('fab-menu-middle').style.right="110px";
-        document.getElementById('fab-menu-middle').style.bottom="110px";
-        document.getElementById('fab-menu-right').style.bottom="140px";
+        document.getElementById('fab-menu-right').style.right="85px";
+        document.getElementById('fab-menu-middle').style.right="165px";
+        document.getElementById('fab-menu-left').style.right="245px";
+        document.getElementById('fab-menu-top').style.bottom="95px";
 
-        document.getElementById('fab-menu-left').classList.toggle('on', true);
-        document.getElementById('fab-menu-middle').classList.toggle('on', true);
         document.getElementById('fab-menu-right').classList.toggle('on', true);
+        document.getElementById('fab-menu-middle').classList.toggle('on', true);
+        document.getElementById('fab-menu-left').classList.toggle('on', true);
+        document.getElementById('fab-menu-top').classList.toggle('on', true);
     };
 
     $scope.hideMenu = function() {
@@ -70,13 +71,14 @@ angular.module('kApp.MenuController', [])
             $ionicSideMenuDelegate.toggleLeft();
         }
 
-        document.getElementById('fab-menu-left').style.right="16px";
-        document.getElementById('fab-menu-middle').style.right="16px";
-        document.getElementById('fab-menu-middle').style.bottom="16px";
-        document.getElementById('fab-menu-right').style.bottom="16px";
+        document.getElementById('fab-menu-left').style.right="30px";
+        document.getElementById('fab-menu-middle').style.right="30px";
+        document.getElementById('fab-menu-right').style.right="30px";
+        document.getElementById('fab-menu-top').style.bottom="30px";
 
         document.getElementById('fab-menu-left').classList.toggle('on', false);
         document.getElementById('fab-menu-middle').classList.toggle('on', false);
         document.getElementById('fab-menu-right').classList.toggle('on', false);
+        document.getElementById('fab-menu-top').classList.toggle('on', false);
     };
 })
