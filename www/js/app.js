@@ -1,4 +1,4 @@
-angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.Page1Controller', 'kApp.Page2Controller','kApp.Page3Controller','kApp.MenuController', 'ionMdInput'])
+angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.Page1Controller', 'kApp.Page2Controller','kApp.Page3Controller','kApp.Page4Controller','kApp.MenuController', 'ionMdInput'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -57,6 +57,16 @@ angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.Page1Co
             'pageContent': {
                 templateUrl: 'templates/page3.html',
                 controller: 'Page3Controller'
+            }
+        }
+    })
+
+    .state('app.page4', {
+        url: '/page4',
+        views: {
+            'pageContent': {
+                templateUrl: 'templates/page4.html',
+                controller: 'Page4Controller'
             }
         }
     })

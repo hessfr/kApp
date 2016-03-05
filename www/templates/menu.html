@@ -8,7 +8,7 @@
     
     <button id="fab-menu-right" class="menu-button container" ng-click="rightMenuClicked()"></button>
 
-    <button id="fab-menu-top" class="menu-button top-button food" ng-click="rightMenuClicked()"></button>
+    <button id="fab-menu-top" class="menu-button top-button food" ng-click="topMenuClicked()"></button>
     <!-- button-energized-900 -->
 
     <ion-side-menus enable-menu-with-back-views="true">
@@ -29,10 +29,12 @@
 
         <!-- side menu -->
         <ion-side-menu side="left">
-            <ion-header-bar class="dark-bg"><span class="side-menu-header-text">(LOGO) Kaiser</span>
+            <!-- <ion-header-bar class="side-menu-logo"><span class="side-menu-header-text"> -->
+            <ion-header-bar class="dark-bg expanded">
+            <span class="avatar" style="background: url('../img/k22.png'); background-size: 65%; background-position: 65% 60%; background-repeat: no-repeat; background-color: #f2f2f2;"></span>
             </ion-header-bar>
         
-            <ion-content class="stable-bg">
+            <ion-content class="stable-bg has-expanded-header">
                 <ion-list>
                     <ion-item nav-clear menu-close ui-sref="app.page1" ng-click="hideMenu()">
                         Page 1 abc
@@ -42,6 +44,9 @@
                     </ion-item>
                     <ion-item nav-clear menu-close ui-sref="app.page3" ng-click="hideMenu()">
                         Page 3 abc
+                    </ion-item>
+                    <ion-item nav-clear menu-close ui-sref="app.page4" ng-click="hideMenu()">
+                        Page 4 abc
                     </ion-item>
                 </ion-list>
             </ion-content>

@@ -21,4 +21,8 @@ angular.module('kApp.Page1Controller', [])
     // Set Ink
     ionicMaterialInk.displayEffect();
 
+    $scope.testFunction = function () {
+        console.log("xxxxx");
+    }
+
 })

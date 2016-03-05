@@ -32,6 +32,10 @@ angular.module('kApp.MenuController', [])
         $state.go('app.page3');
         $scope.hideMenu();
     };
+    $scope.topMenuClicked = function() {
+        $state.go('app.page4');
+        $scope.hideMenu();
+    };
     $scope.backButtonClicked = function() {
         console.log("backButtonClicked");
         //TODO
