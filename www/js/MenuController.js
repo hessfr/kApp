@@ -9,10 +9,6 @@ angular.module('kApp.MenuController', [])
     $scope.$parent.clearFabs();
     $scope.$parent.setHeaderFab('left');
 
-    // Wait for animation to finish:
-    $timeout(function () {
-        document.getElementById('fab-menu-main').classList.toggle('on');
-    }, 200);
     $scope.mainMenuClicked = function() {
         if ($ionicSideMenuDelegate.isOpen()) {
             $scope.hideMenu();
