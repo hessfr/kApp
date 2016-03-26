@@ -6,6 +6,14 @@ angular.module('kApp.ServiceFactory', [])
 .factory('ServiceFactory', function($http) {
 
 	var factory = {};
+	var baseUrl = '/some/url/for/service/';
+	var url = 'http://localhost:8080/RESTfulExample/rest/message/aaa'; //TODO: just for test
+    var headers = {
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    };
 
 	factory.createAccountSMS = function(firstName, lastName, email, phone) {
 		var data = {
@@ -14,7 +22,13 @@ angular.module('kApp.ServiceFactory', [])
                 'email': email,
                 'phone': phone
         };
-		return $http.post('/some/url/for/service', data);
+		// return $http.post(baseUrl + 'login/', data);
+
+		return $http({
+            method: "GET",
+            headers: headers,
+            url: url
+        })
 	};
 
 	return factory;

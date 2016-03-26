@@ -3,7 +3,7 @@
 
 angular.module('kApp.LoginController', [])
 
-.controller('LoginController', function($scope, $stateParams, $state, $ionicSideMenuDelegate, $timeout, ionicMaterialInk, ionicMaterialMotion, ServiceFactory) {
+.controller('LoginController', function($scope, $stateParams, $state, $ionicSideMenuDelegate, $timeout, ionicMaterialInk, ionicMaterialMotion, ServiceFactory, $http) {
     // Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -18,11 +18,11 @@ angular.module('kApp.LoginController', [])
     $scope.login = function() {
         ServiceFactory.createAccountSMS('myFirstName','myLastName','myEmail','myPhone').then(
             function successCallback(response) {
-                console.log("success callback");
+                console.log("response=" + response);
+                $state.go('app.page1'); //TODO: just for test
             }, 
             function errorCallback(response) {
-                console.log("error callback");
-                $state.go('app.page1'); //TODO: just for test
+                console.log("Login not successful");
             })
     }
 
