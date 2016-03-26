@@ -1,4 +1,4 @@
-angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.LoginController', 'kApp.Page1Controller', 'kApp.Page2Controller','kApp.Page3Controller','kApp.Page4Controller','kApp.MenuController', 'kApp.ServiceFactory', 'ionMdInput'])
+angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.WelcomeController', 'kApp.Page1Controller', 'kApp.Page2Controller','kApp.Page3Controller','kApp.Page4Controller','kApp.MenuController', 'kApp.ServiceFactory', 'ionMdInput'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -31,12 +31,12 @@ angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.LoginCo
         controller: 'AppCtrl'
     })
 
-    .state('app.login', {
-        url: '/login',
+    .state('app.welcome', {
+        url: '/welcome',
         views: {
             'pageContent': {
-                templateUrl: 'templates/login.html',
-                controller: 'LoginController'
+                templateUrl: 'templates/welcome.html',
+                controller: 'WelcomeController'
             }
         }
     })
@@ -82,5 +82,5 @@ angular.module('kApp', ['ionic', 'ionic-material', 'kApp.AppCtrl', 'kApp.LoginCo
     })
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/login');
+    $urlRouterProvider.otherwise('/app/welcome');
 });
