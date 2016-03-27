@@ -216,35 +216,57 @@ $ionicons-font-path: "../lib/ionic/release/fonts" !default;
 }
 
 // ---------- For welcome screen: ----------
-// }
-// .slider {
-//   height: 100%;
-// }
-// .slider-slide {
-//   padding-top: 80px;
-//   color: #000;
-//   background-color: #fff;
-//   text-align: center;
+.slider {
+    height: 90%;
+}
 
-//   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-//   font-weight: 300;
-// }
+.slider-slide {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    color: #000;
+    text-align: center;
 
-// #logo {
-//   margin: 30px 0px;
-// }
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
 
-// #list {
-//   width: 170px;
-//   margin: 30px auto;
-//   font-size: 20px;
-// }
-// #list ol {
-//   margin-top: 30px;
-// }
-// #list ol li {
-//   text-align: left;
-//   list-style: decimal;
-//   margin: 10px 0px;
-// }
+#create-account-slide {
+    padding-top: 10px;
+}
+
+.welcome-input {
+    padding-right: 20px;
+}
+
+.welcome-input-top {
+    padding-top: 15px;
+}
+
+
+.welcome-logo {
+    background: url('../img/k22.png');
+    background-size: 65%;
+    background-position: 65% 60%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#create-account-heading {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#create-account-list {
+    padding-top: 0px;
+}
+
+#button-bar.bottom {
+    position: absolute;
+    bottom: 0px;
+}
 // -----------------------------------------

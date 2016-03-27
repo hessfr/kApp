@@ -15,7 +15,7 @@ angular.module('kApp.ServiceFactory', [])
         'Accept': 'application/json'
     };
 
-	factory.createAccountSMS = function(firstName, lastName, email, phone) {
+	factory.createAccount = function(firstName, lastName, email, phone) {
 		var data = {
                 'firstName': firstName,
                 'lastName': lastName,

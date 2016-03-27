@@ -1,0 +1,61 @@
+<ion-view>
+
+    <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+
+            <ion-slide>
+                <div class="welcome-logo"></div>
+                        
+                <h1>Kaiser App</h1>
+
+                <div>blablabla</div>
+                <div>blalbalbal</div>
+                <div>first</div>
+            </ion-slide>
+
+            <ion-slide>
+                <h3>blabla</h3>
+                <div>blabla</div>
+                <div>blabla</div>
+                <div>blabla</div>
+                <div>blabla</div>
+            </ion-slide>
+
+            <ion-slide id="create-account-slide">
+                <h4 id="create-account-heading">Account erstellen</h3>
+                <div id="create-account-list" class="list">
+                    <div class="row">
+                        <ion-md-input placeholder="Vorname" class="welcome-input-top" type="text"></ion-md-input>
+                        <ion-md-input placeholder="Nachname" class="welcome-input-top" type="text"></ion-md-input>
+                    </div>
+                    
+
+                    <ion-md-input placeholder="Email" class="welcome-input" type="text"></ion-md-input>
+
+                    <ion-md-input placeholder="Handy Nummer" class="welcome-input" type="text"></ion-md-input>
+
+                    <ion-md-input placeholder="Kundennummer (falls vorhanden)" class="welcome-input" type="text"></ion-md-input>
+
+                    <div class="padding">
+                        <button class="button button-full button-assertive ink" ng-click="login()">Login</button>
+                    </div>
+                    <div class="button-bar bottom">
+                        <a class="button button-outline" ng-click="rightButtonClicked()">Ohne Anmeldung fortfahren</a>
+                    </div>
+
+                </div>
+
+
+            </ion-slide>
+
+        </ion-slide-box>
+
+        <div class="button-bar bottom">
+            <a id="left-button" class="button button-outline" ng-click="leftButtonClicked()"></a>
+            <a id="right-button" class="button button-outline" ng-click="rightButtonClicked()"></a>
+        </div>
+
+        </ion-content>
+
+</ion-view>

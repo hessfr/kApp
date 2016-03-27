@@ -20,7 +20,6 @@ angular.module('kApp.WelcomeController', [])
     $scope.login = function() {
         ServiceFactory.createAccountSMS('myFirstName','myLastName','myEmail','myPhone').then(
             function successCallback(response) {
-                console.log("response=" + response);
                 $state.go('app.page1'); //TODO: just for test
             }, 
             function errorCallback(response) {
@@ -34,10 +33,8 @@ angular.module('kApp.WelcomeController', [])
     // Set Ink
     ionicMaterialInk.displayEffect();
 
-
-
     // Called to navigate to the main app
-    var startApp = function() {
+    var startAppWithoutLogin = function() {
         $state.go('app.page1');
 
         // Set a flag that we finished the tutorial
@@ -47,15 +44,12 @@ angular.module('kApp.WelcomeController', [])
     // Comment this out if you wanna test the welcome screen:
     if(window.localStorage['didTutorial'] === "true") {
         console.log('Skip intro');
-        startApp();
+        startAppWithoutLogin();
     } else {
         setTimeout(function () {
             navigator.splashscreen.hide();
         }, 750);
     }
-
-
-
 
     var leftButton = document.getElementById('left-button');
     leftButton.innerHTML = 'SKIP';
@@ -64,14 +58,14 @@ angular.module('kApp.WelcomeController', [])
 
     $scope.leftButtonClicked = function() {
         if (activeSlide == 0) {
-            startApp();
+            startAppWithoutLogin();
         } else {
             prev();
         }
     };
     $scope.rightButtonClicked = function() {
         if (activeSlide == 2) { 
-            startApp();
+            startAppWithoutLogin();
         } else {
             next();
         }
